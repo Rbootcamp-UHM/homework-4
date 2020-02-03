@@ -31,7 +31,7 @@ Your task is to write a script that will:
 5. Automate it by reading in the filenames, and passing the filenames to a function that will automate the data processing.
 6. Collect the filename, max intensity, and wavelengths into a dataframe and output to file. 
 
-** Check out the input and output files to better understand the task **
+__Check out the input and output files to better understand the task__
 
 ## Some hints
 
