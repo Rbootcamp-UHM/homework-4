@@ -44,7 +44,6 @@ __Check out the input and output files to better understand the task__
 7. Instead of plotting to console, generate pdfs, one for each file. To do this, you can just open the pdf device `pdf()` outside of the call to the wrapper function, and turn off the device afterwards. It will create a pdf with multiple pages, one for each time a plot is created.
 8. Write the final dataframe to an output file. It must look like a completed `SampleOutput.csv` with one row per input file. (Note: lambda is the symbol for wavelength.) It might be easier to combine the `myfiles` with the output data (`lambda` and `max_intensity`), but you can use any strategy you wish.
 9. Clean up your code and delete any unnecessary code and comments. Organize your script to put all function definitions at the top of the script, with all the code that does the actual work below it. Use comments to label  these sections.  Make sure you have good comments for each major step, and that the code is readable. Test it by sourcing it from the R console 
-10. 
 
 Just FYI, in case you are wondering, there are two types of readings in this collection of files collecting irradiance and radiance in mutiple directions. Irradiance is a measure of all light hitting the probe in a 180 degree hemisphere. Radiance is is a measure of reflected light, in a narrow angular sample. The filenames contain "up" "left" "right" and "forward" for samples from the probe pointed in different directions relative to a perching location of a damselfly. 
 
