@@ -11,30 +11,24 @@ read.spec <- function ( myfile )  {
 	dat <- read.table(file=myfile, skip=17, comment.char=">")
 	names(dat) <- c("lambda", "intensity")
 	
-	dat <- dat[ dat$lambda >= 300 & dat$lambda <= 750,   ]
+	dat <- dat[ dat$lambda >= 300 & dat$lambda <= 700,   ]
 	return (dat)
 }
 
-dat1 <- read.spec( "Data/20070725_01forirr.txt"  )
-dat2 <- read.spec( "Data/20070725_01upirr.txt"  )
-dat3 <- read.spec( "Data/20070725_01rightirr.txt"  )
-dat4 <- read.spec( "Data/20070725_01leftirr.txt"  )
+dat <- read.spec( "Data/20070725_01forirr.txt"  )
 
 plot.spec <- function( X ) {
 
     plot(X, type="l")
-	max_intensity <- max(X$intensity)   # use indexing to find the lambda @max intensity
-	max_lambda <- X$lambda[ X$intensity  == max_intensity ]
-	
-    points(max_lambda, max_intensity, col="red", cex=3, pch=19)  
-    return(c(max_lambda, max_intensity))
+	# find the max intensity
+	# find the lambda @max intensity, may want to use indexing
+	# add that point to the plot
+	# return (lamda, intensity) @max intensity
 } 
+
 	## What should we return for our final dataframe of max intensity, lambda?
 
-plot(dat1, type="l")   ## ... 
-plot(dat2, type="l")   ## ... 
-plot(dat3, type="l")
-plot(dat4, type="l")
+plot(dat, type="l")   ## ... 
 
 
 
